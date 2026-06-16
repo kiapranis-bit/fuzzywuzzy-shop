@@ -1,0 +1,319 @@
+/* =====================================================
+   SHOP.CSS
+   Page-specific styles for OurShop.html only.
+   Shared navbar/footer/modal styles live in base.css
+===================================================== */
+
+/* ================= AVAILABLE PRODUCTS ================= */
+.shop-section {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.shop-title {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.product-display {
+  max-width: 600px;
+  margin: auto;
+}
+
+.product {
+  display: none;
+}
+
+.product.active {
+  display: block;
+}
+
+.product img {
+  width: 100%;
+  max-width: 450px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+.product-info {
+  margin-top: 20px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.openModalBtn {
+  display: inline-block;
+  padding: 12px 28px;
+  margin-top: 15px;
+  background: linear-gradient(135deg, #111, #333);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.openModalBtn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #000, #444);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.openModalBtn:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ================= PRINTED PRODUCTS GRID ================= */
+.printed-products {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.printed-products h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.product-card h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.product-card p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.buy-btn {
+  padding: 10px 15px;
+  border: none;
+  background: #000;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.buy-btn:hover {
+  background: #333;
+}
+
+/* ================= ORDER MODAL FORM ================= */
+.modal-content h3 {
+  margin-bottom: 15px;
+}
+
+.modal-content form input,
+.modal-content form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.modal-content form button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #000, #333);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.modal-content form button[type="submit"]:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #111, #444);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.modal-content form button[type="submit"]:active {
+  transform: scale(0.97);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+/* ================= DTF SECTION ================= */
+.dtf-section {
+  padding: 100px 10%;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.dtf-section h2 {
+  margin-bottom: 60px;
+  font-size: 30px;
+}
+
+.dtf-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dtf-card {
+  background: #fff;
+  width: 300px;
+  height: 420px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s ease;
+}
+
+.dtf-card:hover {
+  transform: translateY(-8px);
+}
+
+.dtf-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ================= DESIGNER SECTION ================= */
+.designer-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.designer-container {
+  width: 400px;
+  max-width: 100%;
+  margin: auto;
+}
+
+#tshirtCanvas {
+  border: 1px solid #ddd;
+  max-width: 100%;
+}
+
+.designer-controls {
+  margin-top: 20px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.designer-controls label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+}
+
+.designer-controls select,
+.designer-controls input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.color-options {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.color-options button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+.submit-btn-wrap {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.submit-btn-wrap button {
+  padding: 12px 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.submit-btn-wrap button:hover {
+  background: #333;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .shop-section,
+  .dtf-section {
+    padding: 60px 5%;
+  }
+
+  .dtf-container {
+    justify-content: center;
+  }
+
+  .dtf-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .designer-container {
+    width: 100%;
+  }
+}

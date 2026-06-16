@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FuzzyWuzzy Shop - Our Shop</title>
+
+  <link rel="icon" href="assets/image2.png">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="shop.css">
+
+  <!-- Fabric.js (T-shirt designer canvas) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.2.4/fabric.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+</head>
+
+<body data-page="OurShop.html">
+
+<!-- ================= NAVBAR (injected) ================= -->
+<div id="navbar-placeholder"></div>
+
+<!-- ===================== AVAILABLE PRODUCTS (rotating highlight) ===================== -->
+<section class="shop-section">
+
+  <h2 class="shop-title">Available Products</h2>
+
+  <div class="product-display">
+
+    <div class="product active">
+      <img src="assets/DTF03.webp" alt="Custom Graphic Tee">
+      <div class="product-info">
+        <h3>Custom Graphic Tee</h3>
+        <p class="price">K80</p>
+        <p class="description">
+          High-quality cotton t-shirt with vibrant digital illustration print.
+        </p>
+        <button class="openModalBtn">Order DTF</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="assets/DTF02.webp" alt="Premium Hoodie">
+      <div class="product-info">
+        <h3>Premium Hoodie</h3>
+        <p class="price">K150</p>
+        <p class="description">
+          Premium hoodie with durable high-resolution DTF print.
+        </p>
+        <button class="openModalBtn">Order DTF</button>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================== PRINTED PRODUCTS CATALOG ===================== -->
+<section class="printed-products">
+  <h2>Printed T-Shirts</h2>
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img src="assets/luffy-front.png" alt="Anime Prints - Luffy">
+      <h3>Anime Prints</h3>
+      <p>K50.00</p>
+      <button class="buy-btn preview-btn"
+        data-name="Anime Prints - Luffy" data-price="50"
+        data-front="assets/luffy-front.png" data-back="assets/luffy-back.png"
+        data-desc="High quality anime print with vibrant colors">View Design</button>
+      <button class="add-to-cart" data-name="Anime Prints - Luffy" data-price="50">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/zoro-front.png" alt="Anime Prints - Zoro">
+      <h3>Anime Prints</h3>
+      <p>K50.00</p>
+      <button class="buy-btn preview-btn"
+        data-name="Anime Prints - Zoro" data-price="50"
+        data-front="assets/zoro-front.png" data-back="assets/zoro-back.png"
+        data-desc="High quality anime print with vibrant colors">View Design</button>
+      <button class="add-to-cart" data-name="Anime Prints - Zoro" data-price="50">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/eren-front.png" alt="Anime Prints - Eren">
+      <h3>Anime Prints</h3>
+      <p>K50.00</p>
+      <button class="buy-btn preview-btn"
+        data-name="Anime Prints - Eren" data-price="50"
+        data-front="assets/eren-front.png" data-back="assets/eren-back.png"
+        data-desc="High quality anime print with vibrant colors">View Design</button>
+      <button class="add-to-cart" data-name="Anime Prints - Eren" data-price="50">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/gang-front.png" alt="Anime Prints - Gang">
+      <h3>Anime Prints</h3>
+      <p>K50.00</p>
+      <button class="buy-btn preview-btn"
+        data-name="Anime Prints - Gang" data-price="50"
+        data-front="assets/gang-front.png" data-back="assets/gang-back.png"
+        data-desc="High quality anime print with vibrant colors">View Design</button>
+      <button class="add-to-cart" data-name="Anime Prints - Gang" data-price="50">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/archer-front.png" alt="FW Prints - Archer">
+      <h3>FW Prints</h3>
+      <p>K60.00</p>
+      <button class="buy-btn preview-btn"
+        data-name="FW Prints - Archer" data-price="60"
+        data-front="assets/archer-front.png" data-back="assets/archer-back.png"
+        data-desc="Premium fire warrior design print">View Design</button>
+      <button class="add-to-cart" data-name="FW Prints - Archer" data-price="60">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/warrior-front.png" alt="FW Prints - Warrior">
+      <h3>FW Prints</h3>
+      <p>K60.00</p>
+      <button class="buy-btn preview-btn"
+        data-name="FW Prints - Warrior" data-price="60"
+        data-front="assets/warrior-front.png" data-back="assets/warrior-back.png"
+        data-desc="Premium warrior themed design">View Design</button>
+      <button class="add-to-cart" data-name="FW Prints - Warrior" data-price="60">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/png-front.png" alt="PNG Prints">
+      <h3>PNG Prints</h3>
+      <p>K80.00</p>
+      <button class="buy-btn preview-btn"
+        data-name="PNG Prints - Standard" data-price="80"
+        data-front="assets/png-front.png" data-back="assets/png-back.png"
+        data-desc="High-resolution PNG design print">View Design</button>
+      <button class="add-to-cart" data-name="PNG Prints - Standard" data-price="80">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/pnghoodie-front.png" alt="PNG Prints - Hoodie">
+      <h3>PNG Prints</h3>
+      <p>K80.00</p>
+      <button class="buy-btn preview-btn"
+        data-name="PNG Prints - Hoodie" data-price="80"
+        data-front="assets/pnghoodie-front.png" data-back="assets/pnghoodie-back.png"
+        data-desc="High-resolution PNG design print">View Design</button>
+      <button class="add-to-cart" data-name="PNG Prints - Hoodie" data-price="80">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/coolbottle-front.png" alt="FW Prints - Cool Bottle">
+      <h3>FW Prints</h3>
+      <p>K15.00</p>
+      <button class="buy-btn preview-btn"
+        data-name="FW Prints - Cool Bottle" data-price="15"
+        data-front="assets/coolbottle-front.png" data-back="assets/coolbottle-back.png"
+        data-desc="High-resolution FW design print">View Design</button>
+      <button class="add-to-cart" data-name="FW Prints - Cool Bottle" data-price="15">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/coolbottle2-png-front.png" alt="PNG Prints - Cool Bottle 2">
+      <h3>PNG Prints</h3>
+      <p>K15.00</p>
+      <button class="buy-btn preview-btn"
+        data-name="PNG Prints - Cool Bottle 2" data-price="15"
+        data-front="assets/coolbottle2-png-front.png" data-back="assets/coolbottle2-png-back.png"
+        data-desc="High-resolution PNG design print">View Design</button>
+      <button class="add-to-cart" data-name="PNG Prints - Cool Bottle 2" data-price="15">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/totebag-fw-front.png" alt="FW Prints - Tote Bag">
+      <h3>FW Prints</h3>
+      <p>K30.00</p>
+      <button class="buy-btn preview-btn"
+        data-name="FW Prints - Tote Bag" data-price="30"
+        data-front="assets/totebag-fw-front.png" data-back="assets/totebag-fw-back.png"
+        data-desc="High-resolution FW design print">View Design</button>
+      <button class="add-to-cart" data-name="FW Prints - Tote Bag" data-price="30">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/totebag-pngdesign-front.png" alt="PNG Prints - Tote Bag">
+      <h3>PNG Prints</h3>
+      <p>K30.00</p>
+      <button class="buy-btn preview-btn"
+        data-name="PNG Prints - Tote Bag" data-price="30"
+        data-front="assets/totebag-pngdesign-front.png" data-back="assets/totebag-pngdesign-back.png"
+        data-desc="High-resolution PNG design print">View Design</button>
+      <button class="add-to-cart" data-name="PNG Prints - Tote Bag" data-price="30">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/totebag2-pngdesign-front.png" alt="PNG Prints - Tote Bag 2">
+      <h3>FW Prints</h3>
+      <p>K30.00</p>
+      <button class="buy-btn preview-btn"
+        data-name="PNG Prints - Tote Bag 2" data-price="30"
+        data-front="assets/totebag2-pngdesign-front.png" data-back="assets/totebag2-pngdesign-back.png"
+        data-desc="High-resolution PNG design print">View Design</button>
+      <button class="add-to-cart" data-name="PNG Prints - Tote Bag 2" data-price="30">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/phonecase1-front.png" alt="PNG Prints - Phone Case">
+      <h3>FW Prints</h3>
+      <p>K20.00</p>
+      <button class="buy-btn preview-btn"
+        data-name="PNG Prints - Phone Case" data-price="20"
+        data-front="assets/phonecase1-front.png" data-back="assets/phonecase1-back.png"
+        data-desc="High-resolution PNG design print">View Design</button>
+      <button class="add-to-cart" data-name="PNG Prints - Phone Case" data-price="20">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/luffycup-front.png" alt="Anime Prints - Luffy Cup">
+      <h3>FW Prints</h3>
+      <p>K5.00</p>
+      <button class="buy-btn preview-btn"
+        data-name="Anime Prints - Luffy Cup" data-price="5"
+        data-front="assets/luffycup-front.png" data-back="assets/luffycup-back.png"
+        data-desc="High-resolution Anime design print">View Design</button>
+      <button class="add-to-cart" data-name="Anime Prints - Luffy Cup" data-price="5">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== ORDER MODAL ===================== -->
+<div class="modal" id="dtfModal">
+  <div class="modal-content">
+
+    <span class="close-dtf">&times;</span>
+
+    <h3>Checkout</h3>
+
+    <form id="orderForm">
+
+      <input type="text" id="productName" name="product" readonly>
+
+      <input type="text" name="fullName" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="text" id="address" name="address" placeholder="Postal Address" required>
+
+      <select id="deliveryFee">
+        <option value="0">Pickup - Free</option>
+        <option value="10">Standard Delivery - K10</option>
+        <option value="20">Express Delivery - K20</option>
+      </select>
+
+      <select id="province" required>
+        <option value="">Select Province</option>
+        <option value="Morobe">Morobe (Lae)</option>
+        <option value="NCD">NCD (Port Moresby)</option>
+      </select>
+
+      <input type="hidden" id="productPrice">
+      <p>Total: <span id="totalAmount">K0.00</span></p>
+
+      <input type="text" placeholder="Card Number" required>
+      <input type="text" placeholder="MM/YY" required>
+      <input type="text" placeholder="CVV" required>
+
+      <button type="submit">Pay & Confirm</button>
+
+    </form>
+
+  </div>
+</div>
+
+<!-- ================= PREVIEW MODAL ================= -->
+<div class="modal" id="previewModal">
+  <div class="modal-content preview-box">
+
+    <span class="close-preview">&times;</span>
+
+    <h3 id="previewTitle">Product Preview</h3>
+
+    <div class="preview-images">
+      <img id="frontImage" src="" alt="Front View">
+      <img id="backImage" src="" alt="Back View">
+    </div>
+
+    <p id="previewDesc"></p>
+    <p id="previewPrice"></p>
+
+    <button id="confirmOrderBtn">Confirm Order</button>
+
+  </div>
+</div>
+
+<!-- ===================== DTF SERVICES ===================== -->
+<section class="dtf-section">
+
+  <h2>DTF Printing Services</h2>
+
+  <div class="dtf-container">
+
+    <div class="dtf-card">
+      <img src="assets/SmallDt01.jpg" alt="Small DTF print">
+      <h3>Small T-Shirts Print</h3>
+      <p class="price">K30</p>
+      <p>High-quality DTF transfer for small apparel prints.</p>
+    </div>
+
+    <div class="dtf-card">
+      <img src="assets/MediumDt01.png" alt="Medium DTF print">
+      <h3>Medium T-Shirts Print</h3>
+      <p class="price">K50</p>
+      <p>High-quality DTF transfer for medium apparel prints.</p>
+    </div>
+
+    <div class="dtf-card">
+      <img src="assets/LargeDt01.webp" alt="Large DTF print">
+      <h3>Large T-Shirts Print</h3>
+      <p class="price">K80</p>
+      <p>Large vibrant DTF transfer ideal for hoodies and oversized prints.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================== T-SHIRT DESIGNER ===================== -->
+<section class="designer-section">
+
+  <h2>Customize Your T-Shirt</h2>
+
+  <div class="designer-container">
+    <canvas id="tshirtCanvas"></canvas>
+  </div>
+
+  <div class="designer-controls">
+
+    <label>Select T-Shirt Color:</label>
+    <div class="color-options">
+      <button data-color="black" style="background:black;"></button>
+      <button data-color="white" style="background:white; border:1px solid #ccc;"></button>
+      <button data-color="red" style="background:red;"></button>
+      <button data-color="blue" style="background:blue;"></button>
+      <button data-color="green" style="background:green;"></button>
+      <button data-color="yellow" style="background:yellow;"></button>
+    </div>
+
+    <label>Upload Your Design:</label>
+    <input type="file" id="uploadDesign" accept="image/*">
+
+    <label>Select Print Size:</label>
+    <select id="sizeSelector">
+      <option value="a5">A5</option>
+      <option value="a4">A4</option>
+      <option value="a3">A3</option>
+    </select>
+
+    <div class="submit-btn-wrap">
+      <button type="submit" id="submitDesign">Submit Design</button>
+    </div>
+
+  </div>
+
+  <input type="hidden" name="design_x" id="design_x">
+  <input type="hidden" name="design_y" id="design_y">
+  <input type="hidden" name="design_width" id="design_width">
+  <input type="hidden" name="design_height" id="design_height">
+
+</section>
+
+<!-- ================= FOOTER (injected) ================= -->
+<div id="footer-placeholder"></div>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="layout.js"></script>
+<script src="firebase-init.js"></script>
+<script src="api.js"></script>
+<script src="script.js"></script>
+<script src="shop-designer.js"></script>
+
+</body>
+</html>

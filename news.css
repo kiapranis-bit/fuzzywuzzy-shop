@@ -1,0 +1,63 @@
+/* =====================================================
+   NEWS.CSS
+   Page-specific styles for news.html only.
+===================================================== */
+
+.news-section {
+  padding: 80px 10%;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.news-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.news-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.news-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border-left: 6px solid #000;
+}
+
+.news-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.news-box h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #111;
+}
+
+.news-box p {
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .news-section {
+    padding: 60px 20px;
+  }
+
+  .news-title {
+    font-size: 26px;
+  }
+
+  .news-box {
+    padding: 20px;
+  }
+}

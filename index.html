@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FuzzyWuzzy Shop</title>
+
+<link rel="icon" href="assets/image2.png">
+<link rel="stylesheet" href="base.css">
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+</head>
+
+<body data-page="index.html">
+
+<!-- ================= NAVBAR (injected) ================= -->
+<div id="navbar-placeholder"></div>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+
+  <div class="hero-bg-slider">
+    <span style="background-image: url('assets/DTF01.webp');"></span>
+    <span style="background-image: url('assets/DTF02.webp');"></span>
+    <span style="background-image: url('assets/DTF03.webp');"></span>
+  </div>
+
+  <div class="hero-content">
+    <h1>Premium Custom T-Shirts</h1>
+    <p>High-quality prints. Unique designs. Made for you.</p>
+    <a href="OurShop.html" class="hero-btn">Shop Now</a>
+  </div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about-section" id="about">
+
+  <div class="about-wrapper">
+
+    <h2>About Us</h2>
+
+    <p class="about-text">
+      At FuzzyWuzzy Shop, we bring creativity to life through high-quality
+      digital artwork and premium DTF apparel printing. Our mission is to deliver
+      bold, vibrant, and long-lasting designs tailored to every customer.
+    </p>
+
+    <div class="about-stats">
+
+      <div class="stat-box">
+        <h3>3+</h3>
+        <p>Years Illustration</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>2+</h3>
+        <p>Years Printing</p>
+      </div>
+
+      <div class="stat-box">
+        <h3>100+</h3>
+        <p>Happy Clients</p>
+      </div>
+
+    </div>
+
+    <a href="AboutUs.html" class="about-btn">Learn More</a>
+
+  </div>
+
+</section>
+
+<!-- ================= FEATURED PRODUCTS ================= -->
+<section class="featured-products">
+
+  <div class="section-header">
+    <h2>Featured Designs</h2>
+    <p>Explore our latest collections</p>
+  </div>
+
+  <div class="featured-grid">
+
+    <div class="featured-card">
+      <img src="assets/luffy-front.png" alt="Luffy Anime Print">
+      <h3>Luffy Anime Print</h3>
+      <p>K50.00</p>
+
+      <button class="preview-btn"
+        data-name="Luffy Anime Print"
+        data-price="50"
+        data-front="assets/luffy-front.png"
+        data-back="assets/luffy-back.png"
+        data-desc="Premium anime design print">
+        Quick View
+      </button>
+
+      <button class="add-to-cart"
+        data-name="Luffy Anime Print"
+        data-price="50">
+        Add to Cart
+      </button>
+    </div>
+
+    <div class="featured-card">
+      <img src="assets/zoro-front.png" alt="Zoro Anime Print">
+      <h3>Zoro Anime Print</h3>
+      <p>K50.00</p>
+
+      <button class="preview-btn"
+        data-name="Zoro Anime Print"
+        data-price="50"
+        data-front="assets/zoro-front.png"
+        data-back="assets/zoro-back.png"
+        data-desc="Premium anime design print">
+        Quick View
+      </button>
+
+      <button class="add-to-cart"
+        data-name="Zoro Anime Print"
+        data-price="50">
+        Add to Cart
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= PREVIEW MODAL ================= -->
+<div class="modal" id="previewModal">
+  <div class="modal-content preview-box">
+
+    <span class="close-preview">&times;</span>
+
+    <h3 id="previewTitle"></h3>
+
+    <div class="preview-images">
+      <img id="frontImage" alt="Front view">
+      <img id="backImage" alt="Back view">
+    </div>
+
+    <p id="previewDesc"></p>
+    <p id="previewPrice"></p>
+
+    <button id="confirmOrderBtn">Add to Cart</button>
+
+  </div>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact-section">
+
+  <div class="contact-container">
+
+    <h2>Contact Us</h2>
+    <p>Have a question or custom request? Send us a message.</p>
+
+    <form id="contactForm" class="contact-form">
+
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Your Name" required>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" placeholder="Your Email" required>
+      </div>
+
+      <div class="form-group">
+        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+
+      <p id="formStatus" class="form-status"></p>
+
+    </form>
+
+  </div>
+
+</section>
+
+<!-- ================= FOOTER (injected) ================= -->
+<div id="footer-placeholder"></div>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="layout.js"></script>
+<script src="firebase-init.js"></script>
+<script src="api.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

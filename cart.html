@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FuzzyWuzzy Shop - Your Cart</title>
+
+<link rel="icon" href="assets/image2.png">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="cart.css">
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+</head>
+
+<body data-page="cart.html">
+
+<!-- ================= NAVBAR (injected) ================= -->
+<div id="navbar-placeholder"></div>
+
+<!-- ================= CART ================= -->
+<div class="cart-container">
+
+  <h2>Your Shopping Cart</h2>
+
+  <div id="cartItems" class="cart-items"></div>
+
+  <div class="cart-summary">
+    <h3>Total: <span id="total">K0.00</span></h3>
+    <button id="checkoutBtn">Proceed to Checkout</button>
+  </div>
+
+</div>
+
+<!-- ================= FOOTER (injected) ================= -->
+<div id="footer-placeholder"></div>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="layout.js"></script>
+<script src="firebase-init.js"></script>
+<script src="api.js"></script>
+<script src="cart.js"></script>
+
+</body>
+</html>

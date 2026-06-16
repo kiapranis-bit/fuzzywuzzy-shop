@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FuzzyWuzzy Shop - Account</title>
+
+<link rel="icon" href="assets/image2.png">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="auth.css">
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+</head>
+
+<body data-page="auth.html">
+
+<!-- ================= NAVBAR (injected) ================= -->
+<div id="navbar-placeholder"></div>
+
+<!-- ================= AUTH ================= -->
+<div class="auth-page">
+  <div class="auth-box">
+
+    <h2 id="formTitle">Create Account</h2>
+
+    <input type="email" id="authEmail" placeholder="Email Address" required>
+    <input type="password" id="authPassword" placeholder="Password" required>
+
+    <button id="submitBtn">Sign Up</button>
+
+    <p id="authMessage"></p>
+
+    <p id="toggleText">
+      Already have an account? <span id="toggleLink">Login</span>
+    </p>
+
+    <button id="logoutBtn" style="display:none;">Log Out</button>
+
+  </div>
+</div>
+
+<!-- ================= FOOTER (injected) ================= -->
+<div id="footer-placeholder"></div>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="layout.js"></script>
+<script src="firebase-init.js"></script>
+<script src="auth.js"></script>
+
+</body>
+</html>

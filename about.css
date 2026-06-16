@@ -1,0 +1,140 @@
+/* =====================================================
+   ABOUT.CSS
+   Page-specific styles for AboutUs.html only.
+   Shared navbar/footer/modal styles live in base.css
+===================================================== */
+
+/* ================= ABOUT HERO ================= */
+.about-hero {
+  background: linear-gradient(135deg, #111, #333);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.about-hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.about-hero-content p {
+  font-size: 18px;
+  color: #ddd;
+}
+
+/* ================= INTRO ================= */
+.about-intro {
+  padding: 80px 10%;
+  background: #fff;
+}
+
+.intro-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-text h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.intro-text p {
+  font-size: 17px;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.services-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.services-list li {
+  background: #f0f0f0;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ================= SERVICE SECTIONS ================= */
+.service-section {
+  padding: 80px 10%;
+  background: #fafafa;
+}
+
+.service-section.light {
+  background: #f0f4ff;
+}
+
+.service-section.dark {
+  background: #111;
+  color: #fff;
+}
+
+.service-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.service-wrapper.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.service-text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.service-text p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.service-images {
+  flex: 1;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  min-width: 250px;
+}
+
+.service-images img {
+  width: calc(33.33% - 8px);
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .about-hero {
+    padding: 70px 20px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 28px;
+  }
+
+  .service-wrapper,
+  .service-wrapper.reverse {
+    flex-direction: column;
+  }
+
+  .service-images img {
+    width: calc(33.33% - 6px);
+    height: 110px;
+  }
+}
